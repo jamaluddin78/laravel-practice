@@ -9,7 +9,16 @@ class StudentController extends Controller
     public function index(){
 //        return 'Hello World form controller';
         $name = 'Jamal Uddin';
-        return view('demo',compact('name'));
+        $age = 25;
+//        return view('demo',compact('name','age'));
+//        return view ('demo')
+//            ->with('name',$name)
+//            ->with('q',$age);
+
+        return view('demo',[
+            'name' => $name,
+            'age' => $age
+        ]);
 
         return view('demo');
 //        return view('admin.home.home');
